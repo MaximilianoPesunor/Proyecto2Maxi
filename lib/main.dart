@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
     List<Comic> comics = [];
 
     for (var u in jsonData) {
-      Comic comic = Comic(u["month"], u["num"], u["year"], u["safe_title"], u["title"], u["day"]);
+      Comic comic = Comic(u["month"], u["year"], u["safe_title"], u["title"], u["day"]);
       comics.add(comic);
     }
     return comics;
@@ -73,6 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class Comic {
-  final String month, number, year, safe_title, title, day;
-  Comic(this.month, this.number, this.year, this.safe_title, this.title, this.day);
+  final String month, year, safe_title, title, day;
+  Comic(this.month, this.year, this.safe_title, this.title, this.day);
 }
